@@ -13,12 +13,14 @@ def index():
 @app.route('/generate', methods=['POST'])
 def generate():
     prompt = request.form['prompt']
-    response = openai.Completion.create(
-        engine="davinci",
-        prompt=prompt,
-        max_tokens=50
+    response = openai.ChatCompletion.create(
+        messages=[
+            {"role": "user", "content": promp}
+        ],
+        model="gpt-3.5-turbo-0125",
+        temperature = 0.5,
     )
-    generated_text = response.choices[0].text.strip()
+    generated_text = response['choices'][0]['message']['content'].strip()
     return render_template('index.html', response=generated_text)
 
 if __name__ == '__main__':
