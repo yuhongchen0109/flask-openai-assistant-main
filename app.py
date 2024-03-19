@@ -25,9 +25,6 @@ else:
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
-# Init client
-# client = OpenAI(api_key=OPENAI_API_KEY)
-
 # Create new assistant or load existing
 assistant_id = create_assistant(client)
 
