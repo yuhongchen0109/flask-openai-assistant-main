@@ -15,7 +15,7 @@ def generate():
     prompt = request.form['prompt']
     response = openai.ChatCompletion.create(
         messages=[
-            {"role": "user", "content": promp}
+            {"role": "user", "content": prompt}
         ],
         model="gpt-3.5-turbo-0125",
         temperature = 0.5,
