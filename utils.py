@@ -20,7 +20,7 @@ def create_assistant(client):
           The assistant, GreenPower Solutions Sales Mentor, has been programmed to assist junior sales representatives in learning company standard operating procedures and effective selling techniques as salespersons.
           A document has been provided with information on GreenPower Solutions' solar sales processes and training details.
           """,
-            model="gpt-4-1106-preview",
+            model="gpt-3.5-turbo-0125",
             tools=[{"type": "retrieval"}],
             file_ids=[file.id],
         )
