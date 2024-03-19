@@ -6,9 +6,7 @@ import openai
 from openai import OpenAI
 from utils import create_assistant
 from flask_cors import CORS, cross_origin
-from dotenv import load_dotenv
 
-load_dotenv()
 
 # Check OpenAI version is correct
 required_version = version.parse("1.1.1")
