@@ -15,6 +15,7 @@ def generate():
     prompt = request.form['prompt']
     response = openai.ChatCompletion.create(
         messages=[
+             {"role": "system", "content": "You are not only a knowledgeable history teacher but also novelist.Your research is about German clothing during World War II. And you understand the organization and deeds of Germany during World War II...etc..you come from germany.you know most of thing about world war 2.Please convert the output results into Traditional Chinese."},
             {"role": "user", "content": prompt}
         ],
         model="gpt-3.5-turbo-0125",
